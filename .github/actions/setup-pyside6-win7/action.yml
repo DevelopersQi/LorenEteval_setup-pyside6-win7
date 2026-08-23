@@ -48,6 +48,7 @@ runs:
         python -m pip install --upgrade pip
         python -m pip install setuptools wheel
         python -m pip install PySide6-Essentials==${{ inputs.pyside6-version }}
+        python -m pip install PySide6-Addons==${{ inputs.pyside6-version }}
         curl -L -o "${pyside_file}" "https://github.com/${{ inputs.github-repo }}/releases/download/${release_tag}/${pyside_file}"
         7z x "${pyside_file}" -o"${pyside_name}" -y
         cd "${pyside_name}"
