@@ -9,7 +9,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        os: [ windows-2019, windows-2022, windows-2025, windows-latest ]
+        os: [ windows-latest ]
         python-version: [ "3.11" ]
         pyside6-version: [ "6.6.0", "6.6.1", "6.6.2", "6.6.3", "6.7.2", "6.7.3", "6.8.0", "6.8.1", "6.8.2", "6.8.3" ]
     steps:
