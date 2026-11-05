@@ -1,12 +1,11 @@
 name: Test composite action
 
-on: [ push, pull_request ]
+on: [ push, pull_request, workflow_dispatch ]
 
 jobs:
   test-composite:
     name: Test composite on Python${{ matrix.python-version }} PySide6 ${{ matrix.pyside6-version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    continue-on-error: true
     strategy:
       matrix:
         os: [ windows-latest ]

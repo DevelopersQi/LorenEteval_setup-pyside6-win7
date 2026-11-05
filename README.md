@@ -1,6 +1,6 @@
 # setup-pyside6-win7
 
-[![Test composite action](https://github.com/LorenEteval/setup-pyside6-win7/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/LorenEteval/setup-pyside6-win7/actions/workflows/test.yml)
+[![Test composite action](https://github.com/DevelopersQi/LorenEteval_setup-pyside6-win7/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/LorenEteval/setup-pyside6-win7/actions/workflows/test.yml)
 
 GitHub action that sets up a Windows7–compatible version of PySide6.
 
@@ -8,7 +8,7 @@ GitHub action that sets up a Windows7–compatible version of PySide6.
 
 ```yaml
 - name: Setup PySide6 for Windows7  
-  uses: LorenEteval/setup-pyside6-win7@v1
+  uses: DevelopersQi/LorenEteval_setup-pyside6-win7@aa0989d281e3dab9c8e08f112401ec7e92e3a164
   with:
     # required: PySide6 version
     pyside6-version: "6.8.3"
@@ -26,3 +26,8 @@ GitHub action that sets up a Windows7–compatible version of PySide6.
     python -c "import sys; print(sys.version)"
     python -c "import PySide6; print(PySide6.__version__)"
 ```
+
+
+## Compatibility notes
+
+The action replaces the Qt runtime with a Windows 7-compatible build. The GitHub-hosted Windows runner test verifies installation and import behavior on a modern Windows runner only; it does not prove Windows 7 runtime compatibility. Validate GUI startup, platform plugins, and required Qt modules on a real Windows 7 x64 machine or VM. This repository currently documents a pinned commit because no `v1` release tag is published.
